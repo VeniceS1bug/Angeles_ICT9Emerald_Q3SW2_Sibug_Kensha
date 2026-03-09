@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Q3 Seatwork 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            text-align:center;
+            padding:40px;
+             background-image: url("technology.jpg");
+             background-size: cover;
+             background-position: center;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .box{
+            background:white;
+            padding:20px;
+            width:400px;
+            margin: auto;
+            border-radius:10px;
+            align-items: center;
+            
+        }
+
+        h1{
+            font-size: 50px;
+            color: black;
+            background-color: white;
+            padding: 20px;
+        }
+
+        p{
+            background-color: white;
+        }
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <h1><strong>Product Locator</strong></h1>
+
+    <p>Enter your budget to see what kind of phone you can buy.</p>
+
+    <div class="box">
+
+        <input type="number" id="budget" class="form-control" placeholder="Enter your budget">
+
+        <br>
+
+        <button class="btn btn-primary" onclick="checkBudget()">Check</button>
+
+        <br><br>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+    <br>
+
+
+
+
+<script>
+
+    function checkBudget(){
+
+        let money = document.getElementById("budget").value;
+
+        if(money >= 60000){
+            document.getElementById("result").innerHTML = "You can buy a high-end phone.";
+        }
+        else if(money >= 40000){
+            document.getElementById("result").innerHTML = "You can buy a mid-range phone.";
+        }
+        else{
+            document.getElementById("result").innerHTML = "You can buy a basic phone.";
+        }
+
+    }
+
+</script>
+
+</body>
+
+</html>
